@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="header-container">
-                <img class="header-logo" src="../images/ats_logo_1.png" alt="ATS Group Logo"/>
+                <a href="/"><img class="header-logo" src="../images/ats_logo_1.png" alt="ATS Group Logo"/></a>
             <div id="burger-menu" class="burger-menu">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -34,21 +34,6 @@
             <li><a class="nav-link" href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
-    <!-- <header>
-        <div class="header-container">
-            <div class="logo-container">
-                <img class="header-logo" src="../images/ats_logo_1.png" alt="ATS Group Logo"/>
-            </div>
-            <nav>
-                <ul>
-                    <li class="nav-active-li"><a class="nav-link nav-active-a" href="index.html">HOME</a></li>
-                    <li><a class="nav-link" href="services.html">SERVICES</a></li>
-                    <li><a class="nav-link" href="about.html">ABOUT US</a></li>
-                    <li><a class="nav-link" href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> -->
     
 
 <!-- HERO -->
@@ -62,7 +47,7 @@
 
         <div class="hero-items">
             <img class="hero-logo" src="../images/ats_logo_2.png" alt="ATS Group Logo"/>
-            <button class="hero-button">EXPLORE OUR SERVICES</button>
+            <a href="services.html"><button class="hero-button">EXPLORE OUR SERVICES</button></a>
         </div>
 
         <div class="hero-images">
@@ -78,16 +63,7 @@
     <div class="section-container">
         <h1 class="services-heading">SERVICES</h1>
         <div class="service-card-container">
-            <div class="service-card">
-                <div class="card-bottom"></div>
-                <div class="card-top">
-                    <div class="heading-container">
-                        <h2 class="service-heading">BESPOKE BUILDS</h2>
-                    </div>
-                    <img class="service-image" src="../images/car_1.png" alt="Car install"/>
-                </div>
-            </div>
-            <div class="service-card">
+            <div class="service-card" data-href="#drone-surveys">
                 <div class="card-bottom"></div>
                 <div class="card-top">
                     <div class="heading-container">
@@ -96,7 +72,7 @@
                     <img class="service-image" src="../images/drone_2.png" alt="Drone in flight"/>
                 </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-href="#telecommunications-surveys">
                 <div class="card-bottom"></div>
                 <div class="card-top">
                     <div class="heading-container">
@@ -105,7 +81,7 @@
                     <img class="service-image" src="../images/rooftop_1.png" alt="Drone in flight"/>
                 </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-href="#panoramic-surveys">
                 <div class="card-bottom"></div>
                 <div class="card-top">
                     <div class="heading-container">
@@ -114,7 +90,7 @@
                     <img class="service-image" src="../images/panorama_1.png" alt="Panorama of london"/>
                 </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-href="#chimney-surveys">
                 <div class="card-bottom"></div>
                 <div class="card-top">
                     <div class="heading-container">
@@ -123,7 +99,16 @@
                     <img class="service-image" src="../images/chimney_1.png" alt="Cracked chimney"/>
                 </div>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-href="#bespoke-builds">
+                <div class="card-bottom"></div>
+                <div class="card-top">
+                    <div class="heading-container">
+                        <h2 class="service-heading">BESPOKE BUILDS</h2>
+                    </div>
+                    <img class="service-image" src="../images/car_1.png" alt="Car install"/>
+                </div>
+            </div>
+            <div class="service-card" data-href="#prototyping">
                 <div class="card-bottom"></div>
                 <div class="card-top">
                     <div class="heading-container">
@@ -152,12 +137,12 @@
 <footer>
     <div class="reference-container">
         <ul>
-            <li><a>Bespoke Builds</a></li>
-            <li><a>Drone Surveys</a></li>
-            <li><a>360° Panoramic Surveys</a></li>
-            <li><a>Chimney Surveys</a></li>
-            <li><a>Telecommunications Surveys</a></li>
-            <li><a>Prototyping</a></li>
+            <li><a href="services.html#drone-surveys">Drone Surveys</a></li>
+            <li><a href="services.html#telecom-pano-surveys">Telecommunications Surveys</a></li>
+            <li><a href="services.html#telecom-pano-surveys">360° Panoramic Surveys</a></li>
+            <li><a href="services.html#chimney-surveys">Chimney Surveys</a></li>
+            <li><a href="services.html#bespoke-prototype">Bespoke Builds</a></li>
+            <li><a href="services.html#bespoke-prototype">Prototyping</a></li>
         </ul>
     </div>
 
@@ -178,29 +163,6 @@
         </iframe>
     </div>
 </footer>
-
-
-
-<!--
-
-    <section class="grey-section">
-        <div class="page">
-            <div class="home-info-container">
-            <h2 class="info-heading">ATS GROUP - AERIAL TARGET SYSTEMS LTD.</h2>
-            <div class="home-info">
-                <img class="drillbit" src="../images/drillbit.png" alt="small drillbit image"/>
-                <img class="drone" src="../images/drone.png" alt="small drone image"/>
-                <p>Formed in 1992 and incorporated in 1994 ATS has established a reputation for innovation in the Telecommunications, Surveying and Bespoke Build Industries.  We have evolved thanks to the dedicated work of an exceptional and imaginative team of people who know how to make things happen. ATS are market leaders in Elevated Photography, Chimney, Telecommunications and Drone Surveys, Design and Prototyping as well as Drive Test Vehicle Installations.</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section class="navy-section">
-        <div class="page">
-            <div class="contact-container">
-                
-    </section> -->
 </body>
 <script src="./index.js"></script>
 </html>
