@@ -1,0 +1,14 @@
+@font-face {
+  /* 1. Define the universal name you'll use in your CSS */
+  font-family: 'ATS'; 
+  
+  /* 2. Point to your font file */
+  src: url('../fonts/ATS2-Regular.woff') format('woff');
+  
+  /* 3. Define this file's specific weight and style */
+  font-weight: normal; /* Use 'normal' or 400 for a regular weight */
+  font-style: normal;
+  
+  /* 4. Best practice for performance: display fallback text while the font loads */
+  font-display: swap; 
+}
