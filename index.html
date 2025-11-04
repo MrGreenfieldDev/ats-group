@@ -12,12 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="preload" href="./images/hero_1.png" as="image" fetchpriority="high">
     <title>ATS Group</title>
 </head>
 <body>
     <header>
         <div class="header-container">
-                <a href="/"><img class="header-logo" src="../images/ats_logo_1.png" alt="ATS Group Logo"/></a>
+                <a href="/"><img class="header-logo" src="../images/ats_logo_1.png" alt="ATS Group Logo" fetchpriority="high"/></a>
             <div id="burger-menu" class="burger-menu">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -41,18 +42,18 @@
 
     <div class="hero-container">
         <div class="hero-images">
-            <img class="hero-image" src="../images/drone_1.png" alt="Drone in flight"/>
-            <img class="hero-image" src="../images/cnc_1.png" alt="CNC machine"/>
+            <img class="hero-image" src="../images/drone_1.png" fetchpriority="high" alt="Drone in flight"/>
+            <img class="hero-image" src="../images/cnc_1.png" fetchpriority="high" alt="CNC machine"/>
         </div>
 
         <div class="hero-items">
-            <img class="hero-logo" src="../images/ats_logo_2.png" alt="ATS Group Logo"/>
+            <img class="hero-logo" src="../images/ats_logo_2.png" fetchpriority="high" alt="ATS Group Logo"/>
             <a href="services.html"><button class="hero-button">EXPLORE OUR SERVICES</button></a>
         </div>
 
         <div class="hero-images">
-            <img class="hero-image" src="../images/camera_1.png" alt="Camera operator"/>
-            <img class="hero-image" src="../images/rooftop_1.png" alt="Rooftop with tripod"/>
+            <img class="hero-image" src="../images/camera_1.png" fetchpriority="high" alt="Camera operator"/>
+            <img class="hero-image" src="../images/rooftop_1.png" fetchpriority="high" alt="Rooftop with tripod"/>
         </div>
     </div>
 
@@ -69,7 +70,7 @@
                     <div class="heading-container">
                         <h2 class="service-heading">DRONE SURVEYS</h2>
                     </div>
-                    <img class="service-image" src="../images/drone_2.png" alt="Drone in flight"/>
+                    <img class="service-image" src="../images/drone_2.png" loading="lazy" alt="Drone in flight"/>
                 </div>
             </div>
             <div class="service-card" data-href="#telecommunications-surveys">
@@ -78,7 +79,7 @@
                     <div class="heading-container">
                         <h2 class="service-heading">TELECOMMUNICATIONS SURVEYS</h2>
                     </div>
-                    <img class="service-image" src="../images/rooftop_1.png" alt="Drone in flight"/>
+                    <img class="service-image" src="../images/rooftop_1.png" loading="lazy" alt="Drone in flight"/>
                 </div>
             </div>
             <div class="service-card" data-href="#panoramic-surveys">
@@ -87,7 +88,7 @@
                     <div class="heading-container">
                         <h2 class="service-heading">PANORAMIC SURVEYS</h2>
                     </div>
-                    <img class="service-image" src="../images/panorama_1.png" alt="Panorama of london"/>
+                    <img class="service-image" src="../images/panorama_1.png" loading="lazy" alt="Panorama of london"/>
                 </div>
             </div>
             <div class="service-card" data-href="#chimney-surveys">
@@ -96,7 +97,7 @@
                     <div class="heading-container">
                         <h2 class="service-heading">CHIMNEY SURVEYS</h2>
                     </div>  
-                    <img class="service-image" src="../images/chimney_1.png" alt="Cracked chimney"/>
+                    <img class="service-image" src="../images/chimney_1.png" loading="lazy" alt="Cracked chimney"/>
                 </div>
             </div>
             <div class="service-card" data-href="#bespoke-builds">
@@ -105,7 +106,7 @@
                     <div class="heading-container">
                         <h2 class="service-heading">BESPOKE BUILDS</h2>
                     </div>
-                    <img class="service-image" src="../images/car_1.png" alt="Car install"/>
+                    <img class="service-image" src="../images/car_1.png" loading="lazy" alt="Car install"/>
                 </div>
             </div>
             <div class="service-card" data-href="#prototyping">
@@ -114,7 +115,7 @@
                     <div class="heading-container">
                         <h2 class="service-heading">PROTOTYPING</h2>
                     </div>
-                    <img class="service-image" src="../images/cnc_2.png" alt="CNC machine"/>
+                    <img class="service-image" src="../images/cnc_2.png" loading="lazy" alt="CNC machine"/>
                 </div>
             </div>
         </div>
@@ -125,8 +126,8 @@
 
 <section class="section-about">
     <div class="about-container">
-        <img class="about-image drillbit" src="../images/drillbit.png" alt="small drillbit image"/>
-        <img class="about-image drone" src="../images/drone.png" alt="small drone image"/>
+        <img class="about-image drillbit" src="../images/drillbit.png" loading="lazy" alt="small drillbit image"/>
+        <img class="about-image drone" src="../images/drone.png" loading="lazy" alt="small drone image"/>
         <h2 class="about-heading">ATS GROUP <br> AERIAL TARGET SYSTEMS LTD.</h2>
         <p class="about-text">Formed in 1992 and incorporated in 1994 ATS has established a reputation for innovation in the Telecommunications, Surveying and Bespoke Build Industries.<br><br> We have evolved thanks to the dedicated work of an exceptional and imaginative team of people who know how to make things happen.<br><br>ATS are market leaders in Elevated Photography, Chimney, Telecommunications and Drone Surveys, Design and Prototyping as well as Drive Test Vehicle Installations.</p>
     </div>
