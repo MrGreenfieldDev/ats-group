@@ -13,12 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
     serviceCards.forEach(card => {
         card.addEventListener('click', () => {
             const href = card.getAttribute('data-href');
+
             if (href === "#telecommunications-surveys" || href === "#panoramic-surveys") {
-                window.location.href = "services.html#telecom-pano-surveys";
+                // FIX 1: Add a leading slash (/)
+                window.location.href = "/services.html#telecom-pano-surveys";
             } else if (href === "#bespoke-builds" || href === "#prototyping") {
-                window.location.href = "services.html#bespoke-prototype";
+                // FIX 2: Add a leading slash (/)
+                window.location.href = "/services.html#bespoke-prototype";
             } else {
-                window.location.href = "services.html" + href;
+                // FIX 3: Add a leading slash (/)
+                window.location.href = "/services.html" + href;
             }
         });
     });
