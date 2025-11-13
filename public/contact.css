@@ -5,19 +5,27 @@
     font-family: 'Inter', sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body, html {
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow-x: hidden; /* Only hide horizontal overflow */
+    overflow-y: auto;   /* Allow vertical scrolling for page content */
+    /* Ensure no element can exceed 100% of the viewport width */
     width: 100vw; 
     height: 100vh;
 }
 
+body {
+    background-color: #ECECEC;
+}
+
+.section-contact {
+    background-color: #ffffff;
+}
+
 header {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 60px;
     background-color: white;
@@ -47,10 +55,6 @@ header {
     margin-left: 10px;
 }
 
-.header-logo:hover {
-    cursor: pointer;
-}
-
 /* ... Your other styles ... */
 
 .burger-menu {
@@ -68,12 +72,12 @@ header {
 }
 
 .bar1, .bar2, .bar3 {
-    width: 36px;
+    width: 36px; /* Increased to be easily visible and fill the container width */
     height: 5px;
     margin: 2px 0;
     background-color: #606060;
     border-radius: 2.5px;
-    transition: 0.6s;
+    transition: 0.6s; /* Keep for the animation */
     transform-origin: left center;
 }
 
@@ -106,6 +110,18 @@ nav {
     transition: transform 0.6s;
     z-index: 2;
     background-color: rgba(75, 75, 75, 0.815);
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.desktop-nav ul li:hover {
+    background-color: #ececec;
+}
+
+.desktop-nav ul li:hover a {
+    color: #22b7e9;
 }
 
 .nav-active {
@@ -157,23 +173,89 @@ nav ul li a:active {
 }
 
 /* Small (landscape phones and large phones) */
-@media screen and (max-width: 767px) {
-    
-}
+@media screen and (min-width: 900px) {
 
-/* Medium (tablets portrait) */
-@media screen and (max-width: 991px) {
-    
-}
+    header {
+        height: 80px;
+    }
 
-/* Large (tablets landscape and small desktops) */
-@media screen and (max-width: 1199px) {
-    
-}
+    .header-container {
+        width: 100%;
+        max-width: 1800px;
+    }
 
-/* Extra large (desktop) */
-@media screen and (min-width: 1200px) {
+    .header-container a {
+        display: block;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
 
+    .header-logo {
+        height: 60%;
+        width: auto;
+        margin-left: 50px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .nav-active {
+        top: 60px;
+        transform: translateX(0);
+        width: 100%;
+    }
+
+    .desktop-nav {
+        display: block;
+        margin-right: 50px;
+        height: 100%;
+    }
+
+    .desktop-nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .desktop-nav ul li {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 0;
+    }
+
+    .desktop-nav ul li a {
+        text-decoration: none;
+        color: #606060;
+        font-size: clamp(16px, 1.2vw, 20px);
+        font-weight: 300;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .desktop-nav .active-menu-item {
+        padding-top: 4px;
+        border-bottom: solid 4px #8BC6E8;
+        border-left: none;
+        border-right: none;
+    }
+
+    .desktop-nav .active-menu-item a {
+        color: #424242;
+        font-weight: 400;
+    }
 }
 
 
@@ -208,7 +290,7 @@ nav ul li a:active {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 
 .hero-container img {
@@ -218,6 +300,21 @@ nav ul li a:active {
     transform: translate(-50%, -50%);
     width: 30%;
     height: auto;
+}
+
+@media screen and (min-width: 600px) {
+    .hero-container img {
+        width: clamp(200px, 20%, 400px);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .section-hero {
+        /* background-color: #ECECEC; */
+    }
+    .hero-container {
+        max-width: 1800px;
+    }
 }
 
 
